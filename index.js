@@ -23,6 +23,10 @@ app.use(
   express.static("node_modules/pdfjs-dist/standard_fonts")
 );
 
+app.get("/", (req, res) => {
+  res.send("server is running");
+});
+
 app.post("/verify", async (req, res) => {
   const { accountNumber, referenceNumber } = req.body;
 
