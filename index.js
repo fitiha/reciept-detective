@@ -41,6 +41,7 @@ app.post("/verify", async (req, res) => {
 
   const agent = new https.Agent({
     rejectUnauthorized: false, // Bypass SSL certificate verification
+    secureProtocol: "TLSv1_2_method",
   });
 
   try {
